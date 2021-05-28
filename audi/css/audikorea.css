@@ -1,0 +1,1163 @@
+@charset "utf=8";
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid rebeccapurple; */
+}
+
+body{min-width: 1850px;}
+
+a{text-decoration: none;}
+
+header{
+    background: url(/images/audi/e-tronmain.png) 50% 50% no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+}
+
+header .top{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    padding-right: 45px;
+}
+
+header .top img{width: 200px; height: 100px;}
+header .top .menubar{display: flex; align-items: center;}
+header .top .menubar > input{background-color: #d7d7d7;}
+header .top .menubar > span{font-size: 42px; color: #fff;}
+header .top .menubar > span:nth-of-type(1){margin: 0 10px; font-size: 36px;}
+
+header .maintxt{
+    position: absolute;
+    left: 4%;
+    top: 150px;
+    color: #fff;
+}
+header .maintxt p{font-size: 23px; font-weight: 500;}
+header .maintxt h2{font-size: 70px; line-height: 60px; margin-bottom: 10px;}
+header .maintxt a{
+    width: 160px; 
+    height: 55px; 
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    left: 0; top: 150px;
+    background-color:#000;
+    color: #fff;
+    border: 2px solid #fff;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+header .maintxt a > span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 10;
+}
+
+header .maintxt a:hover{
+    color: #000;
+    border-color: #000;
+    /* background: #fff; */
+    /* transition: ease 1s; */
+}
+header .maintxt a::after{
+    transition: all 0.5s;
+    background: #fff;
+    content: "";
+    position: absolute;
+    left: 0; top: 0;
+    display: block;
+    width: 100%; 
+    height: 55px; 
+    transform: translateY(100%);
+    z-index: 5;
+}
+
+header .maintxt a:hover::after{
+    transform: translateY(0);
+    transition: all 0.5s;
+}
+
+nav{ display: none;}
+
+.sec01{
+    background: url(/images/audi/audilogoback_02.png) 50% 50% no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.sec01 h2{
+    color: #fff; 
+    font-size: 60px; 
+    text-align: center; 
+    padding: 10px 0;}
+
+.sec01 .content{
+    width: 100%;
+    height: 780px;      
+}
+
+/* 브랜드스토리 */
+.sec01 .content > .swiper-container.brandhistory{
+    width: 90%;
+    height: 770px;
+    display: none;
+}
+.sec01 .content > .swiper-container.brandhistory.on{display: block;}
+
+.sec01 > .content .swiper-container.brandhistory .swiper-slide.brand{
+    width: 100%;
+    height: 500px;
+    margin: 55px 0 0 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
+}
+
+.sec01 > .content .swiper-container.brandhistory .swiper-slide.history{
+    color: #fff;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin: 55px 80px 0 0;
+}
+
+.sec01 > .content .swiper-container.brandhistory .swiper-slide.brand h3::after{
+    content: "";
+    display: block;
+    width: 100px; height: 2px;
+    background: #99171a;
+    position: absolute;
+    left: 3px; top: 21%;
+    transform: translateX();
+}
+
+.sec01 > .content .swiper-container.brandhistory .swiper-slide.history h3::after{
+    content: "";
+    display: block;
+    width: 100px; height: 2px;
+    background: #99171a;
+    position: absolute;
+    right: 0; top: 22%;
+}
+
+.sec01 > .content .swiper-container.brandhistory .swiper-slide.brand h3{font-size: 50px;}
+.sec01 > .content .swiper-container.brandhistory .swiper-slide.history h3{
+    font-size: 50px; margin-bottom: 30px;}
+
+.content > .swiper-container.brandhistory .swiper-slide.history > .txt1{
+    display: flex;
+    height: 300px;
+}
+.content > .swiper-container.brandhistory .swiper-slide.history > .txt1 > ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content > .swiper-container.brandhistory .swiper-slide.history > .txt1 > ul:nth-of-type(1){margin: 0 60px;}
+
+.content > .swiper-container.brandhistory.brandhistory .swiper-slide.history > .txt1 > ul > li{list-style: none;}
+
+/* 탭메뉴 */
+.sec01 .tab{
+    width: auto;
+    height: 180px;
+    margin: 0 40px;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    position: relative;
+}
+
+.sec01 .tab span{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.sec01 .tab > span::before{
+    content: "";
+    display: block;
+    width: 150px;
+    height: 1px;
+    background: #fff;
+    position: absolute; 
+    top: 50px;
+}
+
+.sec01 .tab span:hover{color: #bd181c;}
+
+.sec01 .tab > span:hover::before{
+    content: "";
+    display: block;
+    width: 150px;
+    height: 3px;
+    background: #bd181c;
+    position: absolute;
+    top: 50px;
+}
+
+/* 아우디 스토리 */
+.content .tab2{
+    width: 100%;
+    height: 750px;
+    display: none;
+    justify-content: center;
+    position: relative;
+    /* background: #000; */
+    padding-top: 40px;
+}
+.content .tab2.on{display: flex;}
+
+.tab2 .story{
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;  
+}
+
+.tab2 .swiper-slide{width: 100%; height: 100%;}
+
+.tab2 .swiper-slide.box1{
+    background: url(/images/audi/story쿠페.PNG) center;
+    background-size: cover;
+    position: relative;
+}
+
+.tab2 .story h3{font-size: 35px; margin: 25px 0 15px 30px;}
+.tab2 .story .box3 h3, .tab2 .story .box4 h3, .tab2 .story .box5 h3, .tab2 .story .box8 h3{color: #fff;}
+.tab2 .story p:nth-of-type(1), .tab2 .story p:nth-of-type(2){width: 82%; margin-left: 32px; font-size: 14px;}
+.tab2 .story .box2 p:nth-of-type(1), .tab2 .story .box2 p:nth-of-type(2),
+.tab2 .story .box3 p:nth-of-type(1), .tab2 .story .box3 p:nth-of-type(2),
+.tab2 .story .box4 p:nth-of-type(1), .tab2 .story .box4 p:nth-of-type(2),
+.tab2 .story .box5 p:nth-of-type(1), .tab2 .story .box5 p:nth-of-type(2),
+.tab2 .story .box8 p:nth-of-type(1), .tab2 .story .box8 p:nth-of-type(2){color: #fff;}
+
+.tab2 .story .box1 p,
+.tab2 .story .box9 p{background: rgba(255, 255, 255, 0.2);}
+
+.tab2 .story a{
+    color: #fff;
+    margin: 32px 0;
+    border: 1px solid #fff;
+    font-size: 18px;
+    width: 140px;
+    height: 50px;
+    padding: 12px 0;
+    position: absolute;
+    left: 34px; top: 16%;
+    text-align: center;
+    background: #000;
+    overflow: hidden;
+}
+.tab2 .story .box2 a, .tab2 .story .box7 a,
+.tab2 .story .box9 a{left: 34px; top: 20%;}
+.tab2 .story .box4 a,.content .story .box8 a{left: 34px; top: 18%;}
+
+.tab2 .story a > span{
+    z-index: 10; 
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+.tab2 .story a:hover{color: #000; border-color: #000; background: #fff;}
+/* .content .story a::before{
+    transition: all 0.5s;
+    background: #fff;
+    content: "";
+    position: absolute;
+    left: 0; top: 0;
+    display: block;
+    width: 100%; 
+    height: 50px; 
+    transform: translateY(100%);
+    z-index: 5;
+}
+.content .story .swiper-slide.box1 a:hover::before{
+    transform: translateY(0);
+    transition: all 0.5s;
+} */
+
+.tab2 .story a:hover > span{color: #000;}
+
+.tab2 > .story2{
+    width: 600px;
+    height: 100%;
+    margin: 0;
+    background: #000;
+}
+.tab2 > .story2 .swiper-slide{
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.tab2 > .story2 h3{font-size: 26px; color: #fff;}
+
+.tab2 > .story2 .swiper-slide-thumb-active{ opacity: 1;}
+
+.tab2 .swiper-slide.box2{
+    background: url(/images/audi/story유럽평정.PNG) center;
+    background-size: cover;
+}
+.tab2 .swiper-slide.box3{
+    background: url(/images/audi/storyRSe-트론.PNG) center;
+    background-size: cover;
+}
+.tab2 .swiper-slide.box4{
+    background: url(/images/audi/story포물러.PNG) center;
+    background-size: cover;
+}
+.tab2 .swiper-slide.box5{
+    background: url(/images/audi/story시대별.PNG) center;
+    background-size: cover;
+}
+.tab2 .swiper-slide.box6{
+    background: url(/images/audi/storyr8v10.PNG) center;
+    background-size: cover;
+}
+.tab2 .swiper-slide.box7{
+    background: url(/images/audi/storyQ5.PNG) center;
+    background-size: cover;
+}
+.tab2 .swiper-slide.box8{
+    background: url(/images/audi/storys8L.PNG) center;
+    background-size: cover;
+}
+.tab2 .swiper-slide.box9{
+    background: url(/images/audi/storye-트론.PNG) center;
+    background-size: cover;
+}
+
+.tab2 .story .swiper-button-next,
+.tab2 .story .swiper-button-prve{ display: block;}
+
+/* quattro system */
+.content .quattro{
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.content .quattro.on{display: flex;}
+
+.content .quattro h2{text-align: start; margin: 0;}
+.content .quattro .driving{
+    width: auto;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+    margin: 0 80px;
+}
+.content .quattro .driving h2::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 80px; top: 22%;
+    width: 120px;
+    height: 2px;
+    background: #99171a;
+}
+.content .quattro .driving p{margin-left: 5px;}
+.content .quattro .enjoy{
+    width: auto;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin: 0 80px;
+    align-items: flex-end;
+}
+
+.content .quattro .enjoy .enjoytxt{
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 350px;
+}
+.content .quattro .enjoy .enjoytxt::before{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 705px; bottom: 33%;
+    width: 120px;
+    height: 2px;
+    background: #99171a;
+}
+.content .quattro .enjoy .enjoytxt p{margin-left: 5px;}
+.content .quattro .enjoy a,
+.content .Campaign .Campaigntxt a{
+    order: 1;
+    color: #000;
+    margin: 32px 0;
+    border: 1px solid #000;
+    font-size: 18px;
+    width: 140px;
+    height: 50px;
+    padding: 12px 0;
+    text-align: center;
+    background: #fff;
+    overflow: hidden;
+}
+.content .quattro .enjoy a:hover,
+.content .Campaign .Campaigntxt a:hover{
+    color: #fff;
+    background: black;
+    border: 1px solid #fff;
+    transition: 0.3s ease-in;
+}
+
+.content .Campaign{height: 100%; display: none;}
+.content .Campaign.on{display: block;}
+
+.content .Campaign h2{
+    text-align: start; 
+    color: #000; 
+    padding: 20px 50px;
+    height: auto;
+}
+.content .Campaign h2 > strong,
+.possible .swiper-slide.morepossble h2 > strong{color: #bd181c}
+
+.content .Campaign .BrandCam{
+    width: auto;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    margin: 0 50px;
+}
+.content .Campaign .BrandCam > .camvideo{width: 50%;}
+.content .Campaign video{
+    max-width: 900px;
+    height: 600px;
+    
+}
+
+.content .Campaign .Campaigntxt{
+    width: 41%;
+    height: 600px;
+    font-size: 25px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 70px;
+
+}
+.content .Campaign .Campaigntxt p:nth-of-type(2){margin: 40px 0;}
+
+.content .swiper-container.possible{
+    width: 100%; 
+    height: 800px;
+    display: none;
+}
+.content .swiper-container.possible.on{display: block;}
+
+.possible .swiper-slide.morepossble{
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets{bottom: 25px;}
+
+.possible .swiper-slide.morepossble h2{color: black;}
+.possible .swiper-slide.morepossble h2::after{
+    width: 2px;
+    height: 65px;
+    background: #99171a;
+    content: "";
+    position: absolute;
+    left: 50%; top: 18%;
+}
+.possible .swiper-slide.morepossble .potxt{
+    height: 550px;
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #ffff;
+}
+.possible .swiper-slide.pobox{ 
+    width: 100%; 
+    height: 100%; 
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+.possible .swiper-slide.pobox h3{font-size: 40px; height: 60px;}
+
+.possible .swiper-slide.pobox .auto{
+    background:rgba(0, 0, 0, 0.1);
+    width: 25%; height: 450px;
+    transition: all 1s;
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */    
+}
+
+.possible .swiper-slide.pobox .line{
+    position: relative;
+}
+.possible .swiper-slide.pobox .line::before,
+.possible .swiper-slide.pobox .line::after{
+    content:"";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+}
+
+.possible .swiper-slide.pobox .line:hover::before,
+.possible .swiper-slide.pobox .line:hover::after{width: 100%;}
+
+.possible .swiper-slide.pobox .line:hover h3::before, .possible .swiper-slide.pobox .line:hover h3::after{height: 100%;}
+
+.possible .swiper-slide.pobox .line h3::before,
+.possible .swiper-slide.pobox .line h3::after{
+    content:"";
+    width:2px;
+    height:0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+}
+
+.possible .swiper-slide.pobox .line::after{
+    right:0;
+    bottom: 0;
+    transition-duration: 0.4s;
+}
+.possible .swiper-slide.pobox .line h3::after{
+    right:0;
+    bottom: 0;
+    transition-duration: 0.4s;
+}
+.possible .swiper-slide.pobox .line::before{
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+}
+.possible .swiper-slide.pobox .line h3::before{
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+}
+
+.possible .swiper-slide.pobox .auto:hover,
+.possible .swiper-slide.pobox .emobility:hover,
+.possible .swiper-slide.pobox .digital:hover{
+    background: rgba(0, 0, 0, 0.8);
+    /* border: 3px solid rgba(255, 255, 255, 0.8); */
+}
+
+
+.possible .swiper-slide.pobox .emobility{
+    background: rgba(0, 0, 0, 0.1);
+    width: 25%; height: 450px;
+    transition: all 1s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.possible .swiper-slide.pobox .digital{
+    background: rgba(0, 0, 0, 0.1);
+    width: 25%; height: 450px;
+    transition: all 1s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.possible .swiper-slide.pobox .auto, .possible .pobox .emobility,
+.possible .swiper-slide.pobox .digital{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.possible .swiper-slide.pobox .auto p:nth-of-type(2){ 
+    width: 65%; font-size: 18px; margin-top: 30px;
+}
+.possible .swiper-slide.pobox .emobility p:nth-of-type(2){ 
+    width: 68%; font-size: 17px; margin-top: 30px;}
+.possible .swiper-slide.pobox .digital p:nth-of-type(2){ 
+    width: 70%; font-size: 17px; margin-top: 30px;
+}
+
+.sec02{ width: 100%; height: 100vh;}
+.sec02 > h2{
+    font-size: 60px; 
+    text-align: center; 
+    padding: 10px 0;
+}
+
+.sec02 .service{
+    width: 100%; height: 90%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service .swiper-container.leftbox{
+    background: url(/images/audi/서비스.png) 50% 50% no-repeat;
+    width: 500px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.service .swiper-container.leftbox h3,
+.service .middlebox h3{font-size: 50px; text-align: center; margin: 30px 0;}
+.service .leftbox strong,
+.service .middlebox strong{color: #99171a;}
+.swiper-container.leftbox .swiper-slide.letxt{
+    font-size: 26px; 
+    color: #fff; 
+    height: 80%;
+    padding: 0 20px;
+}
+.leftbox .letxt dl > dt,
+.middlebox .midtxt dl > dt{font-weight: bold; font-size: 18px;}
+.leftbox .letxt dl > dd,
+.middlebox .midtxt dl > dd{font-size: 16px;}
+.swiper-container.leftbox .txt01{
+    display: flex;
+    flex-direction: column;
+}
+.leftbox .txt01 h4{margin-bottom: 10px;}
+.leftbox .txt01 dl > dd{margin-bottom: 20px;}
+
+.leftbox .txt02 p,
+.leftbox .txt04 p{
+    font-size: 18px; 
+    margin: 20px 0;
+    font-weight: bold;
+}
+.leftbox .txt02 dd:nth-of-type(5),
+.leftbox .txt04 dd:nth-of-type(2){margin-bottom: 20px;}
+
+.leftbox .txt03 p{font-size: 20px;}
+.leftbox .txt03 p:nth-of-type(1){margin: 20px 0;}
+
+.service .swiper-container.middlebox{
+    background: url(/images/audi/서비스프로그램.png) 50% 50% no-repeat;
+    width: 500px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 20px;
+}
+.service .swiper-container.middlebox .midtxt{
+    font-size: 26px; 
+    color: #fff; 
+    height: 80%;
+    padding: 0 20px;
+}
+
+.middlebox p{font-size: 18px; font-weight: bold; margin: 20px 0;}
+.middlebox .txt05 dd:nth-of-type(2),
+.middlebox .txt05 dd:nth-of-type(4){margin-bottom: 20px;}
+
+.middlebox .txt06 dd:nth-of-type(1),
+.middlebox .txt06 dd:nth-of-type(6),
+.middlebox .txt07 dd:nth-of-type(2){margin-bottom: 20px;}
+.middlebox .txt08 dd:nth-of-type(2),
+.middlebox .txt08 dd:nth-of-type(4),
+.middlebox .txt08 dd:nth-of-type(6){margin-bottom: 15px;}
+
+.middlebox .txt09 ul{
+    font-size: 18px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+}
+
+.middlebox .txt10 ul{font-size: 18px; margin-bottom: 20px; padding: 0 20px;}
+.middlebox .txt10 dd:nth-of-type(2){margin-bottom: 20px;}
+
+.service .rightbox{
+    width: 500px; 
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.rightbox .one{ 
+    background: url(/images/audi/서비스센터.png) 50% 50% no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.rightbox .center {
+    width: 500px; 
+    height: 225px;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+.rightbox .center:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.rightbox .center h3{display: inline-block; font-size: 50px;}
+.rightbox .center span{color: #fff; font-size: 50px;}
+
+.rightbox .customer{ 
+    background: url(/images/audi/고객지원센터.png) 50% 50% no-repeat;    
+    width: 500px; 
+    height: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightbox .customer h3{font-size: 50px;}
+
+.rightbox .accessary{ 
+    background: url(/images/audi/부품-악세서리.png) 50% 50% no-repeat;
+    width: 500px; 
+    height: 225px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.sec03{width: 100%; height: 100vh; position: relative;}
+.sec03 > h2{
+    font-size: 60px; 
+    text-align: center; 
+    padding: 10px 0;
+}
+
+.sec03 .tab2{
+    font-size: 25px;
+    height: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    width: 45%;
+    margin-left: 80px;
+    display: flex;
+    justify-content: space-around;
+    color: #514f4f;
+}
+.sec03 .tab2::after{
+    content: "";
+    position: absolute;
+    left: 0; top: 15%;
+    display: block;
+    background: #000;
+    width: 100%;
+    height: 1px;
+}
+
+.sec03 .tab2 > span{display: block;}
+.sec03 .tab2 > span.on{color: #bd181c;}
+
+.sec03.swiper-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.sec03 .swiper-container .swiper-slide{ 
+    width: 100%;
+    height: 850px;
+    text-align: center;
+}
+
+/* sedan */
+.sec03 .swiper-container .swiper-slide.a3 .img{
+    background: url(/images/audi/a3.PNG) 50% 60% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+.sec03 .swiper-container .swiper-slide.a4 .img{
+    background: url(/images/audi/a4.png) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+.sec03 .swiper-container .swiper-slide.a6 .img{
+    background: url(/images/audi/a6.png) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+    background-size: cover;
+}
+.sec03 .swiper-container .swiper-slide.s6 .img{
+    background: url(/images/audi/s6.png) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+.sec03 .swiper-container .swiper-slide.a8 .img{
+    background: url(/images/audi/a8.png) 50% 70% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+    background-size: cover;
+}
+.sec03 .swiper-container .swiper-slide.a8L .img{
+    background: url(/images/audi/a8L.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+.sec03 .swiper-container .swiper-slide.s8L .img{
+    background: url(/images/audi/s8L.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+
+/* SUV */
+.sec03 .swiper-container .swiper-slide.e-tron .img{
+    background: url(/images/audi/E-tron.png) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto; background-size: cover;
+}
+.sec03 .swiper-container .swiper-slide.Q2 .img{
+    background: url(/images/audi/Q2.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto; background-size: cover;
+}
+.sec03 .swiper-container .swiper-slide.Q3 .img{
+    background: url(/images/audi/Q3.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto; background-size: cover;
+}
+.sec03 .swiper-container .swiper-slide.Q3sport .img{
+    background: url(/images/audi/Q3sportback.PNG) 90% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+.sec03 .swiper-container .swiper-slide.Q4et .img{
+    background: url(/images/audi/Q4e-tron.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto; background-size: cover;
+}
+.sec03 .swiper-container .swiper-slide.Q4etst .img{
+    background: url(/images/audi/q4e-tronsportback.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;  background-size: cover;
+}
+.sec03 .swiper-container .swiper-slide.Q5 .img{
+    background: url(/images/audi/Q5.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto; background-size: cover;
+}
+.sec03 .swiper-container .swiper-slide.sQ5 .img{
+    background: url(/images/audi/sQ5.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto; background-size: cover;
+}
+.sec03 .swiper-container .swiper-slide.Q7 .img{
+    background: url(/images/audi/Q7.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;  background-size: cover;
+}
+.sec03 .swiper-container .swiper-slide.Q8 .img{
+    background: url(/images/audi/Q8.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+.sec03 .swiper-container .swiper-slide.sQ8 .img{
+    background: url(/images/audi/sQ8.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+
+/* coupe */
+.sec03 .swiper-container .swiper-slide.a5coupe .img{
+    background: url(/images/audi/a5coupe.png) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+.sec03 .swiper-container .swiper-slide.R8 .img{
+    background: url(/images/audi/R8_2.png) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto; background-size: cover;
+}
+
+/* sportback */
+.sec03 .swiper-container .swiper-slide.a5sport .img{
+    background: url(/images/audi/a5sportback.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto; background-size: cover;
+}
+.sec03 .swiper-container .swiper-slide.a7sport .img{
+    background: url(/images/audi/a7sportback.PNG) 70% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto; 
+}
+.sec03 .swiper-container .swiper-slide.s7sport .img{
+    background: url(/images/audi/S7sportback.png) 40% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto; background-size: cover;
+}
+.sec03 .swiper-container .swiper-slide.Q3sport .img{
+    background: url(/images/audi/Q3sportback.PNG) 50% 25% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+.sec03 .swiper-container .swiper-slide.Q4sport .img{
+    background: url(/images/audi/q4e-tronsportback.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+
+/* 카브리올레 */
+.sec03 .swiper-container .swiper-slide.A5Cabriolet .img{
+    background: url(/images/audi/카브리올레.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+
+/* 전기차 */
+.sec03 .swiper-container .swiper-slide.e-tronGT .img{
+    background: url(/images/audi/e-tronGT.png) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+.sec03 .swiper-container .swiper-slide.RSe-tronGT .img{
+    background: url(/images/audi/RSe-tronGT.PNG) 50% 50% no-repeat;
+    width: 80%;
+    height: 600px;
+    margin: 30px auto;
+}
+
+.sec03 .swiper-container .swiper-slide h3{font-size: 40px; margin: 15px 0;}
+.sec03 .swiper-container .swiper-slide p{font-size: 18px; font-weight: 500;}
+.sec03 .swiper-container .swiper-slide a{
+    width: 160px; 
+    height: 45px;
+    line-height: 42px;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    left: 46%; bottom: 30px;
+    background-color:#000;
+    color: #fff;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+.sec03 .swiper-container .swiper-slide span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.sec03 .swiper-container .swiper-slide a:hover{
+    background: transparent;
+    color: #000;
+    border-color: #000;
+}
+.sec03 .swiper-container .swiper-slide a::after{
+    transition: all 0.5s;
+    background: #fff;
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    display: block;
+    width: 100%; 
+    height: 45px; 
+    transform: translateY(100%);
+    z-index: 5;
+}
+
+.sec03 .swiper-container .swiper-slide a:hover::after{
+    transform: translateY(0);
+    transition: all 0.5s;
+}
+
+.sec03 .swiper-container.sedan .swiper-button-next,
+.sec03 .swiper-container.sedan .swiper-button-prev{display: block;}
+.model{display: none;}
+.model.on{display: flex;}
+
+footer{width: 100%; height: 90vh; background: #100e0e; position: relative;}
+footer li{list-style: none;}
+
+footer .map{
+    width: 85%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.map .fottop{
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scrolltop{
+    color: #fff; 
+    position: absolute;
+    font-size: 40px;
+    top: 12%;
+    right: 10%;
+    z-index: 30;
+}
+
+footer .menu{
+    display: flex;
+    color: #fff;
+    /* width: 80%; */
+    height: 500px;
+    
+}
+
+footer .menu .fottitle{
+    font-size: 40px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+footer .menu .fottitle::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0; top: 80px;
+    width: 120px;
+    height: 3px;
+    background: #99171a;
+}
+
+footer .menu ul{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+footer .menu ul > li a{
+    color: #fff;
+    line-height: 50px;
+}
+
+.policy{width: 100%; height: 200px; margin: 0 auto;}
+.policy .pol{
+    width: 70%;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    position: relative;
+}
+.policy .pol span{position: relative;}
+.policy .pol span::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 158px; 
+    top: 5px;
+    width: 1px; height: 15px;
+    background: #fff;
+}
+.policy .pol span:nth-of-type(2):after{left: 80px;}
+.policy .pol span:nth-of-type(3):after{left: 103%;}
+.policy .pol span:nth-of-type(4):after{left: 103%;}
+.policy .pol span:nth-of-type(5):after{display: none;}
+
+
+
+.sns{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns .sittxt p{
+    font-size: 14px;
+    color: #878787;
+    margin: 10px 0;
+}
+
+.icon {
+    color: #878787;
+    display: flex;
+    align-items: center;
+}
+.icon span{font-size: 40px; margin: 0 10px;}
+.icon i{font-size: 40px;}
