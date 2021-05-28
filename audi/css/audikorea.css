@@ -32,10 +32,21 @@ header .top{
 }
 
 header .top img{width: 200px; height: 100px;}
-header .top .menubar{display: flex; align-items: center;}
+header .top .menubar{display: flex; align-items: center;cursor: pointer;}
 header .top .menubar > input{background-color: #d7d7d7;}
-header .top .menubar > span{font-size: 42px; color: #fff;}
-header .top .menubar > span:nth-of-type(1){margin: 0 10px; font-size: 36px;}
+header .top .menubar > span{margin: 0 10px; font-size: 36px; color: #fff;}
+header .top .menubar > span:nth-of-type(2){
+    background: url(/images/audi/outline_menu_open_white_24dp.png) 50% 50% no-repeat;
+    width: 35px;
+    height: 35px;
+}
+header .top .menubar > span:nth-of-type(2).on{
+    background: url(/images/audi/outline_close_white_24dp.png) 50% 50% no-repeat;
+    width: 42px;
+    height: 42px;
+    background-size: cover;
+    z-index: 200;
+}
 
 header .maintxt{
     position: absolute;
@@ -71,8 +82,6 @@ header .maintxt a > span{
 header .maintxt a:hover{
     color: #000;
     border-color: #000;
-    /* background: #fff; */
-    /* transition: ease 1s; */
 }
 header .maintxt a::after{
     transition: all 0.5s;
@@ -92,7 +101,72 @@ header .maintxt a:hover::after{
     transition: all 0.5s;
 }
 
-nav{ display: none;}
+
+nav{ 
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    height: 100vh;
+    background: #000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    color: #fff;
+    z-index: 100;
+    font-size: 40px;
+    font-weight: 600;
+    cursor: pointer;
+}
+nav.on{display: flex;}
+nav .title{margin: 35px 20px;}
+
+nav .submenu{
+    display: block; 
+    font-size: 20px; 
+    width: 400px;
+    height: 100vh;
+    position: absolute;
+    right: 400px;
+    top: 0;
+    overflow: hidden;
+    transform: translateX(100%);
+}
+nav .submenu.on{
+    transform: translateX(0);
+    transition: all 0.3s;
+}
+nav .submenu ul{
+    width: 100%;
+    position: relative;
+}
+nav .submenu ul > li{
+    list-style: none;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 23px;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+}
+nav .submenu.on ul > li.on{
+    transform: translateX(0);
+    transition: all 0.3s;
+}
+nav .submenu ul > li a{
+    color: red;
+    margin: 20px 0;
+}
+
+
 
 .sec01{
     background: url(/images/audi/audilogoback_02.png) 50% 50% no-repeat;
