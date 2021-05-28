@@ -1,4 +1,4 @@
-@charset "utf=8";
+@charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
 @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 
@@ -32,10 +32,21 @@ header .top{
 }
 
 header .top img{width: 200px; height: 100px;}
-header .top .menubar{display: flex; align-items: center;}
+header .top .menubar{display: flex; align-items: center;cursor: pointer;}
 header .top .menubar > input{background-color: #d7d7d7;}
-header .top .menubar > span{font-size: 42px; color: #fff;}
-header .top .menubar > span:nth-of-type(1){margin: 0 10px; font-size: 36px;}
+header .top .menubar > span{margin: 0 10px; font-size: 36px; color: #fff;}
+header .top .menubar > span:nth-of-type(2){
+    background: url(/images/audi/outline_menu_open_white_24dp.png) 50% 50% no-repeat;
+    width: 35px;
+    height: 35px;
+}
+header .top .menubar > span:nth-of-type(2).on{
+    background: url(/images/audi/outline_close_white_24dp.png) 50% 50% no-repeat;
+    width: 42px;
+    height: 42px;
+    background-size: cover;
+    z-index: 200;
+}
 
 header .maintxt{
     position: absolute;
@@ -45,7 +56,7 @@ header .maintxt{
 }
 header .maintxt p{font-size: 23px; font-weight: 500;}
 header .maintxt h2{font-size: 70px; line-height: 60px; margin-bottom: 10px;}
-header .maintxt a{
+header .maintxt .abox{
     width: 160px; 
     height: 55px; 
     font-size: 18px;
@@ -59,7 +70,7 @@ header .maintxt a{
     overflow: hidden;
 }
 
-header .maintxt a > span{
+header .maintxt .abox > span{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -68,13 +79,11 @@ header .maintxt a > span{
     z-index: 10;
 }
 
-header .maintxt a:hover{
+header .maintxt .abox:hover{
     color: #000;
     border-color: #000;
-    /* background: #fff; */
-    /* transition: ease 1s; */
 }
-header .maintxt a::after{
+header .maintxt .abox::after{
     transition: all 0.5s;
     background: #fff;
     content: "";
@@ -87,12 +96,77 @@ header .maintxt a::after{
     z-index: 5;
 }
 
-header .maintxt a:hover::after{
+header .maintxt .abox:hover::after{
     transform: translateY(0);
     transition: all 0.5s;
 }
 
-nav{ display: none;}
+
+nav{ 
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    height: 100vh;
+    background: #000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    color: #fff;
+    z-index: 100;
+    font-size: 40px;
+    font-weight: 600;
+    cursor: pointer;
+}
+nav.on{display: flex;}
+nav .title{margin: 35px 20px;}
+
+nav .submenu{
+    display: block; 
+    font-size: 20px; 
+    width: 400px;
+    height: 100vh;
+    position: absolute;
+    right: 400px;
+    top: 0;
+    overflow: hidden;
+    transform: translateX(100%);
+}
+nav .submenu.on{
+    transform: translateX(0);
+    transition: all 0.3s;
+}
+nav .submenu ul{
+    width: 100%;
+    position: relative;
+}
+nav .submenu ul > li{
+    list-style: none;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 23px;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+}
+nav .submenu.on ul > li.on{
+    transform: translateX(0);
+    transition: all 0.3s;
+}
+nav .submenu ul > li a{
+    color: #000;
+    margin: 20px 0;
+}
+
+
 
 .sec01{
     background: url(/images/audi/audilogoback_02.png) 50% 50% no-repeat;
@@ -257,7 +331,7 @@ nav{ display: none;}
 .tab2 .story .box1 p,
 .tab2 .story .box9 p{background: rgba(255, 255, 255, 0.2);}
 
-.tab2 .story a{
+.tab2 .story .more{
     color: #fff;
     margin: 32px 0;
     border: 1px solid #fff;
@@ -271,11 +345,11 @@ nav{ display: none;}
     background: #000;
     overflow: hidden;
 }
-.tab2 .story .box2 a, .tab2 .story .box7 a,
-.tab2 .story .box9 a{left: 34px; top: 20%;}
-.tab2 .story .box4 a,.content .story .box8 a{left: 34px; top: 18%;}
+.tab2 .story .box2 .more, .tab2 .story .box7 .more,
+.tab2 .story .box9 .more{left: 34px; top: 20%;}
+.tab2 .story .box4 .more,.content .story .box8 .more{left: 34px; top: 18%;}
 
-.tab2 .story a > span{
+.tab2 .story .more > span{
     z-index: 10; 
     color: #fff;
     position: absolute;
@@ -284,7 +358,7 @@ nav{ display: none;}
     transform: translate(-50%, -50%);
     white-space: nowrap;
 }
-.tab2 .story a:hover{color: #000; border-color: #000; background: #fff;}
+.tab2 .story .more:hover{color: #000; border-color: #000; background: #fff;}
 /* .content .story a::before{
     transition: all 0.5s;
     background: #fff;
@@ -302,7 +376,7 @@ nav{ display: none;}
     transition: all 0.5s;
 } */
 
-.tab2 .story a:hover > span{color: #000;}
+.tab2 .story .more:hover > span{color: #000;}
 
 .tab2 > .story2{
     width: 600px;
@@ -715,16 +789,17 @@ nav{ display: none;}
     flex-direction: column;
     justify-content: space-between;
 }
-.rightbox .one{ 
+.rightbox .center{ 
     background: url(/images/audi/서비스센터.png) 50% 50% no-repeat;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    width: 500px; 
+    height: 225px;
 }
 
-.rightbox .center {
+/* .rightbox .one {
     width: 500px; 
     height: 225px;
     -webkit-transform: scale(1);
@@ -741,14 +816,14 @@ nav{ display: none;}
     cursor: pointer;
     transition: all 1s ease-in-out;
 }
-.rightbox .center:hover{
+.rightbox .one:hover{
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
     transition: all 0.5s ease-in-out;
-}
+} */
 
 
 
@@ -1005,20 +1080,21 @@ nav{ display: none;}
 
 .sec03 .swiper-container .swiper-slide h3{font-size: 40px; margin: 15px 0;}
 .sec03 .swiper-container .swiper-slide p{font-size: 18px; font-weight: 500;}
-.sec03 .swiper-container .swiper-slide a{
+.sec03 .swiper-container .swiper-slide .morebox{
     width: 160px; 
     height: 45px;
     line-height: 42px;
     font-size: 18px;
     font-weight: 700;
     position: absolute;
-    left: 46%; bottom: 30px;
+    left: 46%; top: 90%;
     background-color:#000;
     color: #fff;
     border: 2px solid #fff;
+    text-decoration: none;
     overflow: hidden;
 }
-.sec03 .swiper-container .swiper-slide span{
+.sec03 .swiper-container .swiper-slide .morebox > span{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1027,17 +1103,16 @@ nav{ display: none;}
     z-index: 10;
 }
 
-.sec03 .swiper-container .swiper-slide a:hover{
-    background: transparent;
+.sec03 .swiper-container .swiper-slide .morebox:hover{
     color: #000;
     border-color: #000;
 }
-.sec03 .swiper-container .swiper-slide a::after{
+.sec03 .swiper-container .swiper-slide .morebox::after{
     transition: all 0.5s;
     background: #fff;
     content: "";
     position: absolute;
-    left: 0; bottom: 0;
+    left: 0; top: 0;
     display: block;
     width: 100%; 
     height: 45px; 
@@ -1045,13 +1120,13 @@ nav{ display: none;}
     z-index: 5;
 }
 
-.sec03 .swiper-container .swiper-slide a:hover::after{
+.sec03 .swiper-container .swiper-slide .morebox:hover::after{
     transform: translateY(0);
     transition: all 0.5s;
 }
 
-.sec03 .swiper-container.sedan .swiper-button-next,
-.sec03 .swiper-container.sedan .swiper-button-prev{display: block;}
+.sec03 .swiper-container.model .swiper-button-next,
+.sec03 .swiper-container.model .swiper-button-prev{display: block;}
 .model{display: none;}
 .model.on{display: flex;}
 

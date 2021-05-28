@@ -83,6 +83,13 @@ var swiper7 = new Swiper(".model", {
 });
 
 $(document).ready(function(){
+  $(".menubar > span:eq(1)").click(function(){
+    $('nav,.submenu').toggleClass("on");
+    $(this).toggleClass("on");
+  });
+  $("nav > div > .title").click(function() {
+    $('#'+$(this).data('id')).toggleClass("on").siblings().removeClass("on");
+  });
   $(".tab > span").click(function() {
     $(this).addClass("on").siblings().removeClass("on");
     $('#'+$(this).data('id')).addClass('on').siblings().removeClass('on');
