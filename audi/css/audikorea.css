@@ -14,7 +14,7 @@ body{min-width: 1850px;}
 a{text-decoration: none;}
 
 header{
-    background: url(../audi/images/audi/e-tronmain.png) 50% 50% no-repeat;
+    background: url(../images/audi/audi/e-tronmain.png) 50% 50% no-repeat;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -36,12 +36,12 @@ header .top .menubar{display: flex; align-items: center;cursor: pointer;}
 header .top .menubar > input{background-color: #d7d7d7;}
 header .top .menubar > span{margin: 0 10px; font-size: 36px; color: #fff;}
 header .top .menubar > span:nth-of-type(2){
-    background: url(../audi/images/audi/outline_menu_open_white_24dp.png) 50% 50% no-repeat;
+    background: url(../images/audi/outline_menu_open_white_24dp.png) 50% 50% no-repeat;
     width: 35px;
     height: 35px;
 }
 header .top .menubar > span:nth-of-type(2).on{
-    background: url(../audi/images/audi/outline_close_white_24dp.png) 50% 50% no-repeat;
+    background: url(../images/audi/outline_close_white_24dp.png) 50% 50% no-repeat;
     width: 42px;
     height: 42px;
     background-size: cover;
@@ -169,7 +169,7 @@ nav .submenu ul > li a:hover{color: #bd181c;}
 
 
 .sec01{
-    background: url(../audi/images/audi/audilogoback_02.png) 50% 50% no-repeat;
+    background: url(../images/audi/audilogoback_02.png) 50% 50% no-repeat;
     width: 100%;
     height: 100vh;
 }
@@ -315,7 +315,7 @@ nav .submenu ul > li a:hover{color: #bd181c;}
 .tab2 .swiper-slide{width: 100%; height: 100%;}
 
 .tab2 .swiper-slide.box1{
-    background: url(../audi/images/audi/story쿠페.PNG) center;
+    background: url(../images/audi/story쿠페.PNG) center;
     background-size: cover;
     position: relative;
 }
@@ -396,35 +396,35 @@ nav .submenu ul > li a:hover{color: #bd181c;}
 .tab2 > .story2 .swiper-slide-thumb-active{ opacity: 1;}
 
 .tab2 .swiper-slide.box2{
-    background: url(../audi/images/audi/story유럽평정.PNG) center;
+    background: url(../images/audi/story유럽평정.PNG) center;
     background-size: cover;
 }
 .tab2 .swiper-slide.box3{
-    background: url(../audi/images/audi/storyRSe-트론.PNG) center;
+    background: url(../images/audi/storyRSe-트론.PNG) center;
     background-size: cover;
 }
 .tab2 .swiper-slide.box4{
-    background: url(../audi/images/audi/story포물러.PNG) center;
+    background: url(../images/audi/story포물러.PNG) center;
     background-size: cover;
 }
 .tab2 .swiper-slide.box5{
-    background: url(../audi/images/audi/story시대별.PNG) center;
+    background: url(../images/audi/story시대별.PNG) center;
     background-size: cover;
 }
 .tab2 .swiper-slide.box6{
-    background: url(../audi/images/audi/storyr8v10.PNG) center;
+    background: url(../images/audi/storyr8v10.PNG) center;
     background-size: cover;
 }
 .tab2 .swiper-slide.box7{
-    background: url(../audi/images/audi/storyQ5.PNG) center;
+    background: url(../images/audi/storyQ5.PNG) center;
     background-size: cover;
 }
 .tab2 .swiper-slide.box8{
-    background: url(../audi/images/audi/storys8L.PNG) center;
+    background: url(../images/audi/storys8L.PNG) center;
     background-size: cover;
 }
 .tab2 .swiper-slide.box9{
-    background: url(../audi/images/audi/storye-트론.PNG) center;
+    background: url(../images/audi/storye-트론.PNG) center;
     background-size: cover;
 }
 
@@ -704,7 +704,7 @@ nav .submenu ul > li a:hover{color: #bd181c;}
 }
 
 .service .swiper-container.leftbox{
-    background: url(../audi/images/audi/서비스.png) 50% 50% no-repeat;
+    background: url(../images/audi/서비스.png) 50% 50% no-repeat;
     width: 500px;
     height: 700px;
     display: flex;
@@ -745,7 +745,7 @@ nav .submenu ul > li a:hover{color: #bd181c;}
 .leftbox .txt03 p:nth-of-type(1){margin: 20px 0;}
 
 .service .swiper-container.middlebox{
-    background: url(../audi/images/audi/서비스프로그램.png) 50% 50% no-repeat;
+    background: url(../images/audi/서비스프로그램.png) 50% 50% no-repeat;
     width: 500px;
     height: 700px;
     display: flex;
@@ -791,7 +791,7 @@ nav .submenu ul > li a:hover{color: #bd181c;}
     justify-content: space-between;
 }
 .rightbox .center{ 
-    background: url(../audi/images/audi/서비스센터.png) 50% 50% no-repeat;
+    background: url(../images/audi/서비스센터.png) 50% 50% no-repeat;
     color: #fff;
     display: flex;
     align-items: center;
@@ -832,7 +832,7 @@ nav .submenu ul > li a:hover{color: #bd181c;}
 .rightbox .center span{color: #fff; font-size: 50px;}
 
 .rightbox .customer{ 
-    background: url(../audi/images/audi/고객지원센터.png) 50% 50% no-repeat;    
+    background: url(../images/audi/고객지원센터.png) 50% 50% no-repeat;    
     width: 500px; 
     height: 225px;
     display: flex;
@@ -842,7 +842,7 @@ nav .submenu ul > li a:hover{color: #bd181c;}
 .rightbox .customer h3{font-size: 50px;}
 
 .rightbox .accessary{ 
-    background: url(../audi/images/audi/부품-악세서리.png) 50% 50% no-repeat;
+    background: url(../images/audi/부품-악세서리.png) 50% 50% no-repeat;
     width: 500px; 
     height: 225px;
     color: #fff;
@@ -900,39 +900,39 @@ nav .submenu ul > li a:hover{color: #bd181c;}
 
 /* sedan */
 .sec03 .swiper-container .swiper-slide.a3 .img{
-    background: url(../audi/images/audi/a3.PNG) 50% 60% no-repeat;
+    background: url(../images/audi/a3.PNG) 50% 60% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
 }
 .sec03 .swiper-container .swiper-slide.a4 .img{
-    background: url(../audi/images/audi/a4.png) 50% 50% no-repeat;
+    background: url(../images/audi/a4.png) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
 }
 .sec03 .swiper-container .swiper-slide.a6 .img{
-    background: url(../audi/images/audi/a6.png) 50% 50% no-repeat;
+    background: url(../images/audi/a6.png) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
     background-size: cover;
 }
 .sec03 .swiper-container .swiper-slide.s6 .img{
-    background: url(../audi/images/audi/s6.png) 50% 50% no-repeat;
+    background: url(../images/audi/s6.png) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
 }
 .sec03 .swiper-container .swiper-slide.a8 .img{
-    background: url(../audi/images/audi/a8.png) 50% 70% no-repeat;
+    background: url(../images/audi/a8.png) 50% 70% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
     background-size: cover;
 }
 .sec03 .swiper-container .swiper-slide.a8L .img{
-    background: url(../audi/images/audi/a8L.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/a8L.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
@@ -946,67 +946,67 @@ nav .submenu ul > li a:hover{color: #bd181c;}
 
 /* SUV */
 .sec03 .swiper-container .swiper-slide.e-tron .img{
-    background: url(../audi/images/audi/E-tron.png) 50% 50% no-repeat;
+    background: url(../images/audi/E-tron.png) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto; background-size: cover;
 }
 .sec03 .swiper-container .swiper-slide.Q2 .img{
-    background: url(../audi/images/audi/Q2.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/Q2.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto; background-size: cover;
 }
 .sec03 .swiper-container .swiper-slide.Q3 .img{
-    background: url(../audi/images/audi/Q3.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/Q3.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto; background-size: cover;
 }
 .sec03 .swiper-container .swiper-slide.Q3sport .img{
-    background: url(../audi/images/audi/Q3sportback.PNG) 90% 50% no-repeat;
+    background: url(../images/audi/Q3sportback.PNG) 90% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
 }
 .sec03 .swiper-container .swiper-slide.Q4et .img{
-    background: url(../audi/images/audi/Q4e-tron.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/Q4e-tron.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto; background-size: cover;
 }
 .sec03 .swiper-container .swiper-slide.Q4etst .img{
-    background: url(../audi/images/audi/q4e-tronsportback.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/q4e-tronsportback.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;  background-size: cover;
 }
 .sec03 .swiper-container .swiper-slide.Q5 .img{
-    background: url(../audi/images/audi/Q5.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/Q5.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto; background-size: cover;
 }
 .sec03 .swiper-container .swiper-slide.sQ5 .img{
-    background: url(../audi/images/audi/sQ5.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/sQ5.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto; background-size: cover;
 }
 .sec03 .swiper-container .swiper-slide.Q7 .img{
-    background: url(../audi/images/audi/Q7.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/Q7.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;  background-size: cover;
 }
 .sec03 .swiper-container .swiper-slide.Q8 .img{
-    background: url(../audi/images/audi/Q8.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/Q8.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
 }
 .sec03 .swiper-container .swiper-slide.sQ8 .img{
-    background: url(../audi/images/audi/sQ8.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/sQ8.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
@@ -1014,7 +1014,7 @@ nav .submenu ul > li a:hover{color: #bd181c;}
 
 /* coupe */
 .sec03 .swiper-container .swiper-slide.a5coupe .img{
-    background: url(../audi/images/audi/a5coupe.png) 50% 50% no-repeat;
+    background: url(../images/audi/a5coupe.png) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
@@ -1028,31 +1028,31 @@ nav .submenu ul > li a:hover{color: #bd181c;}
 
 /* sportback */
 .sec03 .swiper-container .swiper-slide.a5sport .img{
-    background: url(../audi/images/audi/a5sportback.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/a5sportback.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto; background-size: cover;
 }
 .sec03 .swiper-container .swiper-slide.a7sport .img{
-    background: url(../audi/images/audi/a7sportback.PNG) 70% 50% no-repeat;
+    background: url(../images/audi/a7sportback.PNG) 70% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto; 
 }
 .sec03 .swiper-container .swiper-slide.s7sport .img{
-    background: url(../audi/images/audi/S7sportback.png) 40% 50% no-repeat;
+    background: url(../images/audi/S7sportback.png) 40% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto; background-size: cover;
 }
 .sec03 .swiper-container .swiper-slide.Q3sport .img{
-    background: url(../audi/images/audi/Q3sportback.PNG) 50% 25% no-repeat;
+    background: url(../images/audi/Q3sportback.PNG) 50% 25% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
 }
 .sec03 .swiper-container .swiper-slide.Q4sport .img{
-    background: url(../audi/images/audi/q4e-tronsportback.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/q4e-tronsportback.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
@@ -1060,7 +1060,7 @@ nav .submenu ul > li a:hover{color: #bd181c;}
 
 /* 카브리올레 */
 .sec03 .swiper-container .swiper-slide.A5Cabriolet .img{
-    background: url(../audi/images/audi/카브리올레.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/카브리올레.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
@@ -1068,13 +1068,13 @@ nav .submenu ul > li a:hover{color: #bd181c;}
 
 /* 전기차 */
 .sec03 .swiper-container .swiper-slide.e-tronGT .img{
-    background: url(../audi/images/audi/e-tronGT.png) 50% 50% no-repeat;
+    background: url(../images/audi/e-tronGT.png) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
 }
 .sec03 .swiper-container .swiper-slide.RSe-tronGT .img{
-    background: url(../audi/images/audi/RSe-tronGT.PNG) 50% 50% no-repeat;
+    background: url(../images/audi/RSe-tronGT.PNG) 50% 50% no-repeat;
     width: 80%;
     height: 600px;
     margin: 30px auto;
