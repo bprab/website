@@ -910,6 +910,7 @@ nav .submenu ul > li a:hover{color: #bd181c;}
     width: 80%;
     height: 600px;
     margin: 30px auto;
+    background-size: cover;
 }
 .sec03 .swiper-container .swiper-slide.a6 .img{
     background: url(../images/audi/a6.PNG) 50% 50% no-repeat;
