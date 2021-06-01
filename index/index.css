@@ -172,7 +172,7 @@ header .angle{
     align-items: center;
 }
 .bg > .inner .img01{
-    background: url(./index/images/tararosa_main.png) 50% 50% no-repeat;
+    background: url(./images/tararosamain.png) 50% 50% no-repeat;
     width: 860px;
     height: 500px;
 }
@@ -301,7 +301,7 @@ header .angle{
 .bg > .inner .txt .link a:nth-of-type(2){margin: 0 20px;}
 
 .sec02 .bg > .inner .img02{
-    background: url(./index/images/audi_main.png) 50% 50% no-repeat;
+    background: url(./images/audimain.png) 50% 50% no-repeat;
     width: 860px;
     height: 500px;
     background-size: contain;
