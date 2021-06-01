@@ -46,7 +46,7 @@ var swiper5 = new Swiper('.swiper-container.Locations', {
     direction: getDirection(),
     loop: true,
     autoplay: {
-        delay: 4500,
+        delay: 3200,
         disableOnInteraction: false,
     },
     pagination: {
@@ -95,12 +95,12 @@ $(document).ready(function() {
         $(".Locations").removeClass("on");
         var iw = window.innerWidth;
         if (iw > 641){
-            $('.mum > h2').delay(1000).animate({top : 160}, 800, 'swing', function() {
-                $('.mum > p').delay(500).animate({top : 290},800, 'swing');
+            $('.mum > h2').delay(1000).animate({top : 160}, 1000, 'swing', function() {
+                $('.mum > p').delay(500).animate({top : 290}, 800, 'swing');
             })
         } else if(iw < 640) {
             $('.mum > h2').delay(1000).animate({ top : 80}, 800, 'swing', function() {
-                $('.mum > p').delay(500).animate({top : 255},800, 'swing');
+                $('.mum > p').delay(500).animate({top : 255}, 800, 'swing');
             })
             
         }
@@ -131,5 +131,13 @@ $(document).ready(function() {
         }, 1000);
     });
     
+    $('.vegas').vegas({
+        slides: [
+            {src: "../images/banner/space01.jpg", delay: 3500},
+            {src: "../images/banner/space02.jpg", delay: 3500},
+            {src: "../images/banner/space03.jpg", delay: 3500},
+        ],
+        animation: ['kenburnsDownLeft', 'kenburnsUpLeft', 'kenburnsUp'],
+    });
 });
 
